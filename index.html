@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
-   <head>
-      <meta charset="UTF-8">
-      <title>私の地元</title>
-      <link rel="stylesheet" href="mystyle.css">
-      <script src="myjs.js"></script>
-   </head>
-   <body>
-      <h1>私の地元は群馬県</h1>
-      <a href="https://www.mapion.co.jp/map/admi10.html">
-      <img src="image/スクリーンショット 2025-07-21 210524.png" alt="群馬県">
-         <p>私の地元は、群馬県の南部にある邑楽郡邑楽町です。</p></a>
-         <ul><h2>邑楽町について</h2><li>邑楽町は、人口約25,000人の町で、とても<b>田舎</b>です。特に私の住んでいる場所は、周りが田んぼか川しかありません。</li>
-         <li>ですが、邑楽町にも象徴的な建物があります。それは、<b>「未来MIRAI」</b>というタワーです。地元では、シンボルタワーの愛称で呼ばれています。</li></ul>
-      <img src="image/tawa-.webp" alt="邑楽町の未来MIRAIタワーの画像">
-      
-      
-   </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ようこそ！邑楽町へ</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // クリック時のアラート（イベントハンドラ練習用）
+    function onTowerClick() {
+      alert('未来MIRAIタワーへようこそ！');
+    }
+
+    // フォーム送信前の確認ダイアログ
+    function confirmSubmit() {
+      return confirm('送信してもよいですか？');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>ようこそ！私の地元・邑楽町へ</h1>
+    <p>未来MIRAIタワーが見守る、のどかな町をご紹介します。</p>
+  </header>
+
+  <section>
+    <h2>邑楽町の基本情報</h2>
+    <ul>
+      <li>人口：約25,000人</li>
+      <li>町のシンボル：未来MIRAIタワー</li>
+      <li>特産品：梨、米、地酒</li>
+    </ul>
+    <img src="image/tawa.webp" alt="未来MIRAIタワーの写真" width="400"
+      ondblclick="onTowerClick()">
+  </section>
+
+  <section>
+    <h2>邑楽町クイズ！</h2>
+    <p>Q. 未来MIRAIタワーの高さは何メートルでしょう？</p>
+    <ul>
+      <li>① 50m</li>
+      <li>② 60m</li>
+      <li>③ 70m</li>
+    </ul>
+    <p><em>ヒント：夜にはライトアップされます✨</em></p>
+    <input type="button" value="回答する" onclick="alert('正解は60mです！')">
+  </section>
+
+  <section>
+    <h2>お問い合わせ・ご意見フォーム</h2>
+    <form action="submit.php" method="post" onsubmit="return confirmSubmit()">
+      <label>お名前：<input type="text" name="name" required></label><br>
+      <label>メール：<input type="email" name="email" required></label><br>
+      <label>ご意見・ご質問：<br>
+        <textarea name="message" rows="4" cols="40"></textarea>
+      </label><br>
+      <input type="submit" value="送信">
+      <input type="reset" value="リセット">
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 私の地元紹介Web</p>
+  </footer>
+</body>
+</html>
