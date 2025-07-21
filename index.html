@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>ようこそ！邑楽町へ</title>
-  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="mystyle.css" />
   <script>
-    // クリック時のアラート（イベントハンドラ練習用）
     function onTowerClick() {
       alert('未来MIRAIタワーへようこそ！');
     }
-
-    // フォーム送信前の確認ダイアログ
     function confirmSubmit() {
       return confirm('送信してもよいですか？');
     }
@@ -21,6 +18,10 @@
   <header>
     <h1>ようこそ！私の地元・邑楽町へ</h1>
     <p>未来MIRAIタワーが見守る、のどかな町をご紹介します。</p>
+    <nav>
+      <a href="index.html">トップ</a> |
+      <a href="gourmet.html">おすすめグルメ</a>
+    </nav>
   </header>
 
   <section>
@@ -28,10 +29,9 @@
     <ul>
       <li>人口：約25,000人</li>
       <li>町のシンボル：未来MIRAIタワー</li>
-      <li>特産品：米、白菜、</li>
+      <li>特産品：米、白菜</li>
     </ul>
-    <img src="image/tawa-.webp" alt="未来MIRAIタワーの写真" width="400"
-      ondblclick="onTowerClick()">
+    <img src="images/tawa-.webp" alt="未来MIRAIタワーの写真" width="400" ondblclick="onTowerClick()" />
   </section>
 
   <section>
@@ -43,25 +43,24 @@
       <li>③ 70m</li>
     </ul>
     <p><em>ヒント：夜にはライトアップされます✨</em></p>
-    <input type="button" value="回答する" onclick="alert('正解は60mです！')">
+    <input type="button" value="回答する" onclick="alert('正解は60mです！')" />
   </section>
+
   <section>
     <p>タワーの内部には189段の階段があり、頂上からは、富士山や東京スカイツリーを望めます。冬には、タワーやその周辺でイルミネーションが見られます。</p>
-  <img src="image/irumi .png" alt="イルミネーションの写真"
+    <img src="images/irumi.png" alt="イルミネーションの写真" width="400" />
   </section>
-    
-    
 
   <section>
     <h2>お問い合わせ・ご意見フォーム</h2>
     <form action="submit.php" method="post" onsubmit="return confirmSubmit()">
-      <label>お名前：<input type="text" name="name" required></label><br>
-      <label>メール：<input type="email" name="email" required></label><br>
-      <label>ご意見・ご質問：<br>
+      <label>お名前：<input type="text" name="name" required /></label><br />
+      <label>メール：<input type="email" name="email" required /></label><br />
+      <label>ご意見・ご質問：<br />
         <textarea name="message" rows="4" cols="40"></textarea>
-      </label><br>
-      <input type="submit" value="送信">
-      <input type="reset" value="リセット">
+      </label><br />
+      <input type="submit" value="送信" />
+      <input type="reset" value="リセット" />
     </form>
   </section>
 
